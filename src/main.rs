@@ -52,7 +52,6 @@ fn main() {
     // println!("{:?}", vector_itemes);
     // println!("{:?}", vector_itemes_2);
 
-
     struct BankAccount {
         ballance: i32,
         verified: bool,
