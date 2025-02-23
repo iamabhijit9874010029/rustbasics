@@ -41,14 +41,28 @@ fn main() {
     // let items: [i32; 5] = [1, 2, 3, 4, 5];
     // println!("{:?}", items);
 
-    let vector_itemes = vec![1, 2, 3, 4, 5];
-    let mut vector_itemes_2 = Vec::new();
-    vector_itemes_2.push(1);
-    vector_itemes_2.push(2);
-    vector_itemes_2.push(3);
-    vector_itemes_2.push(4);
-    vector_itemes_2.push(5);
+    // let vector_itemes = vec![1, 2, 3, 4, 5];
+    // let mut vector_itemes_2 = Vec::new();
+    // vector_itemes_2.push(1);
+    // vector_itemes_2.push(2);
+    // vector_itemes_2.push(3);
+    // vector_itemes_2.push(4);
+    // vector_itemes_2.push(5);
 
-    println!("{:?}", vector_itemes);
-    println!("{:?}", vector_itemes_2);
+    // println!("{:?}", vector_itemes);
+    // println!("{:?}", vector_itemes_2);
+
+
+    struct BankAccount {
+        ballance: i32,
+        verified: bool,
+    }
+
+    let accont = BankAccount {
+        ballance: 100,
+        verified: true,
+    };
+
+    println!("{:?}", accont.ballance);
+    println!("{:?}", accont.verified);
 }
