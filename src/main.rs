@@ -1,6 +1,19 @@
 // fn add(num_one: i32, num_two: i32) -> i32 {
 //     num_one + num_two
 // }
+
+struct BankAccount {
+    ballance: i32,
+    verified: bool,
+}
+
+fn print_ballance(account: &BankAccount) {
+    println!("The ballance is: {:?}", account.ballance);
+}
+
+fn print_verified(account: &BankAccount) {
+    println!("The ballance is: {:?}", account.verified);
+}
 fn main() {
     // println!("Hello, world!");
     // let mut my_name = "Rust";
@@ -52,16 +65,14 @@ fn main() {
     // println!("{:?}", vector_itemes);
     // println!("{:?}", vector_itemes_2);
 
-    struct BankAccount {
-        ballance: i32,
-        verified: bool,
-    }
-
-    let accont = BankAccount {
+    let my_account = BankAccount {
         ballance: 100,
         verified: true,
     };
 
-    println!("{:?}", accont.ballance);
-    println!("{:?}", accont.verified);
+    // println!("{:?}", my_account.ballance);
+    // println!("{:?}", my_account.verified);
+
+    print_ballance(&my_account);
+    print_verified(&my_account);
 }
