@@ -7,13 +7,13 @@ struct BankAccount {
     verified: bool,
 }
 
-fn print_ballance(account: &BankAccount) {
-    println!("The ballance is: {:?}", account.ballance);
-}
+// fn print_ballance(account: &BankAccount) {
+//     println!("The ballance is: {:?}", account.ballance);
+// }
 
-fn print_verified(account: &BankAccount) {
-    println!("The ballance is: {:?}", account.verified);
-}
+// fn print_verified(account: &BankAccount) {
+//     println!("The ballance is: {:?}", account.verified);
+// }
 fn main() {
     // println!("Hello, world!");
     // let mut my_name = "Rust";
@@ -73,6 +73,16 @@ fn main() {
     // println!("{:?}", my_account.ballance);
     // println!("{:?}", my_account.verified);
 
-    print_ballance(&my_account);
-    print_verified(&my_account);
+    // print_ballance(&my_account);
+    // print_verified(&my_account);
+
+    let verification_status = is_verified(&my_account).unwrap();
+    println!("{:?}", verification_status);
+}
+
+fn is_verified(account: &BankAccount) -> Result<bool, bool> {
+    match account.verified {
+        true => Ok(true),
+        false => Err(false),
+    }
 }
