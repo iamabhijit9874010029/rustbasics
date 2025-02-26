@@ -67,7 +67,7 @@ fn main() {
 
     let my_account = BankAccount {
         ballance: 100,
-        verified: true,
+        verified: false,
     };
 
     // println!("{:?}", my_account.ballance);
@@ -76,7 +76,7 @@ fn main() {
     // print_ballance(&my_account);
     // print_verified(&my_account);
 
-    let verification_status = is_verified(&my_account).unwrap();
+    let verification_status = is_verified(&my_account).expect("error occured!");
     println!("{:?}", verification_status);
 }
 
